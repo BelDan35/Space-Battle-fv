@@ -19,7 +19,7 @@ def run_game():
     # Make the Play button.
     play_button = Button(ai_settings, screen, "For a fight!")
     
-    # Create an instance to store game statistics, and a scoreboard.
+# Создание экземпляров GameStats и Scoreboard.
     stats = GameStats(ai_settings)
     sb = Scoreboard(ai_settings, screen, stats)
     # Make a ship, a group of bullets, and a group of aliens.
@@ -30,7 +30,7 @@ def run_game():
     # Create the fleet of aliens.
     gf.create_fleet(ai_settings, screen, ship, aliens)
 
-    # Start the main loop for the game.
+# Запуск основного цикла игры.
     while True:
         gf.check_events(ai_settings, screen, stats, sb, play_button, ship, aliens, bullets)
         

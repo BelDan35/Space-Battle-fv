@@ -1,9 +1,8 @@
 class Settings():
-    """A class to store all settings for Alien Invasion."""
+# Класс для хранения всех настроек игры Space Battle.
 
     def __init__(self):
-        """Initialize the game's static settings."""
-        # Screen settings.
+# 
         self.screen_width = 1250
         self.screen_height = 640
         self.bg_color = (8,8,13)
@@ -20,27 +19,25 @@ class Settings():
         # Alien settings.
         self.fleet_drop_speed = 10
 
-        # How quickly the game speeds up.
+# Темп ускорения игры
         self.speedup_scale = 1.1
-        # How quickly the alien point values increase.
+# Темп роста стоимости пришельцев
         self.score_scale = 1.5
-
         self.initialize_dynamic_settings()
 
     def initialize_dynamic_settings(self):
-        """Initialize settings that change throughout the game."""
         self.ship_speed_factor = 1.5
         self.bullet_speed_factor = 3
         self.alien_speed_factor = 1
 
-        # Scoring.
+# Подсчет очков
         self.alien_points = 50
 
         # fleet_direction of 1 represents right, -1 represents left.
         self.fleet_direction = 1
 
     def increase_speed(self):
-        """Increase speed settings and alien point values."""
+# Увеличивает настройки скорости и стоимость пришельцев.
         self.ship_speed_factor *= self.speedup_scale
         self.bullet_speed_factor *= self.speedup_scale
         self.alien_speed_factor *= self.speedup_scale

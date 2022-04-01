@@ -2,15 +2,15 @@ import pygame
 from pygame.sprite import Sprite
 
 class Alien(Sprite):
-    """A class to represent a single alien in the fleet."""
+    """Класс, представляющий единственного инопланетянина во флоте."""
 
     def __init__(self, ai_settings, screen):
-        """Initialize the alien, and set its starting position."""
+        """Инициализируeт инопланетянина и устанавливает его начальное положение."""
         super(Alien, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
-        # Load the alien image, and set its rect attribute.
+        # Загружает изображение инопланетянина и устанавливает его атрибут rect.
         self.image = pygame.image.load('images/spaceship2.png')
         self.rect = self.image.get_rect()
 
