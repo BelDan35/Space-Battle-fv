@@ -10,24 +10,24 @@ from ship import Ship
 import game_functions as gf
 
 def run_game():
-    # Initialize pygame, settings, and screen object.
+    
     pygame.init()
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Space Battle")
     
-    # Make the Play button.
+    
     play_button = Button(ai_settings, screen, "For a fight!")
     
 # Создание экземпляров GameStats и Scoreboard.
     stats = GameStats(ai_settings)
     sb = Scoreboard(ai_settings, screen, stats)
-    # Make a ship, a group of bullets, and a group of aliens.
+    
     ship = Ship(ai_settings, screen)
     bullets = Group()
     aliens = Group()
     
-    # Create the fleet of aliens.
+    
     gf.create_fleet(ai_settings, screen, ship, aliens)
 
 # Запуск основного цикла игры.

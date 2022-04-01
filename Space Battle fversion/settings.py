@@ -7,16 +7,16 @@ class Settings():
         self.screen_height = 640
         self.bg_color = (8,8,13)
 
-        # Ship settings.
+
         self.ship_limit = 3
 
-        # Bullet settings.
+
         self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = 219, 21, 38
         self.bullets_allowed = 30
 
-        # Alien settings.
+
         self.fleet_drop_speed = 10
 
 # Темп ускорения игры
@@ -33,7 +33,7 @@ class Settings():
 # Подсчет очков
         self.alien_points = 50
 
-        # fleet_direction of 1 represents right, -1 represents left.
+
         self.fleet_direction = 1
 
     def increase_speed(self):
